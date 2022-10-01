@@ -34,7 +34,7 @@ app.get("/movie/:id", async (req, res) => {
     const {id} = req.params;
     const getMovie = await MoviesModel.findOne({_id: id});
     return res.json(getMovie);                         
-});
+});      
 
 
 
