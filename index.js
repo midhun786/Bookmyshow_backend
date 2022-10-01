@@ -9,7 +9,7 @@ var cors = require('cors');
 const app = express();
 
 app.use(cors(
-    
+   "https://celebrated-lily-c13b2b.netlify.app/"
 ));
 app.use(express.json());
 
@@ -26,7 +26,7 @@ app.get("/", (req, res) =>{
 
 //http://localhost:5000/movies
 app.get("/movies", async (req, res) => {
-    const getAllMovies = await MoviesModel.find();
+    const getAllMovies = await MoviesModel.find().to;
     return res.json(getAllMovies);                         //res.send(getAllBooks) -- same 
 });
 
